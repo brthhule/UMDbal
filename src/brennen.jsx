@@ -1,5 +1,5 @@
 import {BuildingsGraph} from "./BuildingsGraph"
-
+//new edit, new branch??
 
 class Main {
     buildingsGraph;
