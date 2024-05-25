@@ -1,4 +1,4 @@
-import {BuildingsGraph} from "./BuildingsGraph"
+import {BuildingsGraph} from "../BuildingsGraph"
 
 
 class Main {
