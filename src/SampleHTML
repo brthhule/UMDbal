@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Example</title>
+</head>
+<body>
+    <h1>UMDle</h1>
+    <form id="userForm">
+        <label for="name">Enter building name here:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Enter</button>
+    </form>
+    <p id="output"></p>
+<script>
+   document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            const name = document.getElementById('name').value;
+            console.log(name);
+    });
+</script>
