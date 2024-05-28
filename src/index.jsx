@@ -9,11 +9,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Welcome />} />
-          <Route path="mainpage" element={<MainPage/>} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
+        <Route index element={<Welcome />} />
+        <Route path="/mainpage" element={<MainPage/>} />
+        <Route path="/*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
   );
