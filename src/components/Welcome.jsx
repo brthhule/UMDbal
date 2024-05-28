@@ -1,19 +1,22 @@
 import '../styles/Welcome.css'
-import MainPage from './MainPage'
+import { useHistory } from 'react-router-dom';
 
-function Welcome () {
+const Welcome = () => {
     const title="UMDbal";
+    const history = useHistory();
+
+    const navigateToMainPage = () => {
+        history.push('/MainPage');
+    };
 
     return (
         <>
             <div id="title-container">
                 <h1>{title}</h1>
                 
-                <button type="button" className="clickable" onClick>
+                <button type="button" className="clickable" onClick={navigateToMainPage}>
                     Enter Here!
                 </button>
-
-                <MainPage/>
             </div>
         </>
     );
