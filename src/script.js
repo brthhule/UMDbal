@@ -71,6 +71,12 @@ class Model {
         Model.addListItem(input);
         Model.displayOutput();
     }
+
+    document.getElementById('userForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const input = document.getElementById('name').value;
+        Model.main(input);
+    });
     
 }
 

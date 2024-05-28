@@ -1,15 +1,7 @@
 import campus from '../assets/UMD-campus.jpg'
-import Model from './Model.js'
-
 import '../styles/MainPage.css'
 
 const MainPage = () => {
-    document.getElementById('userForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const input = document.getElementById('name').value;
-        Model.main(input);
-    });
-
     return (
         <>
             <div id="container">
