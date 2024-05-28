@@ -45,10 +45,11 @@ const MainPage = () => {
                     document.getElementById('output').textContent += ',';
                 }
                 document.getElementById('output').textContent += ' ' + list[i].name;
-            }    
+            }  
     }
 
     function endGame() {
+        console.log("end game");
         document.getElementById('output').textContent = `You Won!`;
     }
     //not working!! Start here
