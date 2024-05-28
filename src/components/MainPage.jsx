@@ -8,12 +8,6 @@ const MainPage = () => {
     var pyonChen = {"name": "Pyon Chen", "xCoord": 38.99217621364386, "yCoord": -76.94490983773476};
     //all building variables defined
     var buildings = [woods, maryMount, dorchester, pyonChen];
-    var woods = {"name": "Woods", "xCoord": 38.98520825094225, "yCoord": -76.94178927335166}
-    var maryMount = {"name": "Mary Mount", "xCoord": 38.9851333833028, "yCoord": -76.94086354821499}
-    var dorchester = {"name": "Dorchester", "xCoord": 38.98684874201056, "yCoord": -76.9461386886941}
-    var pyonChen = {"name": "Pyon Chen", "xCoord": 38.99217621364386, "yCoord": -76.94490983773476};
-    //all building variables defined
-    var buildings = [woods, maryMount, dorchester, pyonChen];
     //array of all buildings
     var list = [];
     //list for guesses, ordered closest to furthests
@@ -26,24 +20,9 @@ const MainPage = () => {
         const input = document.getElementById('name').value;
         addListItem(input);
         displayOutput();
-        event.preventDefault();
-        const input = document.getElementById('name').value;
-        addListItem(input);
-        displayOutput();
     });
-    
+
     function addListItem(text) {
-        if (text == answer.name) {
-            guessed = true;
-            return;
-        }
-        let inList = false;
-        for (var i = 0; i < list.length; i++) {
-            if (list[i].name == text) {
-                inList = true;
-            }
-        }
-        if (inList == false) {
         if (text == answer.name) {
             guessed = true;
             return;
@@ -70,19 +49,15 @@ const MainPage = () => {
         const Δφ = (coord2.xCoord - coord1.xCoord) * Math.PI/180;
         const Δλ = (coord2.yCoord - coord1.yCoord) * Math.PI/180;
 
-        const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ/2) * Math.sin(Δλ/2);
+        const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+                Math.cos(φ1) * Math.cos(φ2) *
+                Math.sin(Δλ/2) * Math.sin(Δλ/2);
         const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
         return R * c; 
     }
 
     function displayOutput() {
-        if (guessed == true) {
-            console.log("end game");
-            document.getElementById('output').textContent = `You Won!`;
-        } else {
-            document.getElementById('output').textContent = `Closests:`;
-            list.sort((a, b) => calculateDistance(a, answer) - calculateDistance(b, answer));
         if (guessed == true) {
             console.log("end game");
             document.getElementById('output').textContent = `You Won!`;
@@ -96,9 +71,8 @@ const MainPage = () => {
                 document.getElementById('output').textContent += ' ' + list[i].name;
             };  
         }  
-            };  
-        }  
-    }
+    }  
+}
 
     return (
         <>
