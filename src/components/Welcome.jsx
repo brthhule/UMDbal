@@ -1,16 +1,9 @@
 import '../styles/Welcome.css'
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 
 const Welcome = () => {
     const title="UMDbal";
-
-    let navigate = useNavigate(); 
-    const changePages = () => {
-        let path = "/MainPage"; 
-        navigate(path);
-    }
 
     return (
         <>
@@ -19,9 +12,9 @@ const Welcome = () => {
 
                 <div></div>
                 
-                <button type="button" className="clickable" onClick={changePages()}>
-                    Enter Here!
-                </button>
+                <Link to="/mainpage">
+                    <button className="clickable">Enter Here!</button>
+                </Link>
             </div>
         </>
     );
