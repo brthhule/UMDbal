@@ -45,6 +45,7 @@ function displayOutput() {
 }
 
 function endGame() {
+    console.log("end game");
     document.getElementById('output').textContent = `You Won!`;
 }
 //not working!! Start here
