@@ -6,4 +6,5 @@
 img {
   width: 500px;
   height: auto;
+  margin-left: calc((100% -- 500px) / 2);
 }

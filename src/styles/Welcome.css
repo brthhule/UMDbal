@@ -1,7 +1,4 @@
 #title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 50vh;
 
   border-style: solid;
@@ -9,6 +6,11 @@
 
 h1 {
   padding: 2px;
+  justify-content: center;
+  width: 500px;
+  text-align: center;
+  margin-left: calc((100% - 500px) / 2);
+  align-items: center;
 }
 
 button {
@@ -22,6 +24,11 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+
+  width: 100px;
+  text-align: center;
+  margin-left: calc((100% - 100px) / 2);
+  align-items: center;
 }
 button:hover {
   border-color: #646cff;
