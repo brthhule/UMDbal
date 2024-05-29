@@ -1,10 +1,15 @@
 #container {
-  width: 90vw;
   overflow: hidden;
+  width: 500px;
+  margin-left: 500px;
+  border-style: solid;
+}
+
+label {
 }
 
 img {
   width: 500px;
   height: auto;
-  margin-left: calc((100% -- 500px) / 2);
+  border-style: solid;
 }
