@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import NoPage from "./components/NoPage";
-import MainPage from "./components/MainPage";
-import Welcome from "./components/Welcome";
+import NoPage from "./screens/EmptyScreen";
+import MainPage from "./screens/HomeScreen";
+import Welcome from "./screens/LoginScreen";
 
 export default function App() {
   return (
