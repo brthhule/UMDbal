@@ -17,7 +17,7 @@ const Welcome = () => {
                 <div></div>
                 
                 <Link to="/mainpage">
-                    <button className="clickable">Enter Here!</button>
+                    <button className="clickable">ENTER</button>
                 </Link>
             </div>
             <img src={MarylandRight} alt="Right side of the Maryland flag" id="right-image"/>

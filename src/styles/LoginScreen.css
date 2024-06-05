@@ -25,7 +25,8 @@ h1 {
   text-align: center;
   margin-left: calc((100% - 500px) / 2);
   align-items: center;
-  padding-top: 80px;
+  padding-top: 50px;
+  font-size: 60px;
 }
 
 button {
