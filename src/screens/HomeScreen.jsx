@@ -1,11 +1,9 @@
 import campus from '../assets/UMD-campus.jpg'
-import '../styles/MainPage.css'
+import '../styles/HomeScreen.css'
 
 const MainPage = () => {
     return (
         <>
-            
-
             <body>
                 <h1>UMDble</h1>
                 <form id="userForm">

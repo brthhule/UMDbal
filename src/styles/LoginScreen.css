@@ -1,0 +1,94 @@
+* {
+  font-family: "Itim-Regular";
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#title-container {
+  height: 50vh;
+  margin-top: 50px;
+  min-width: 150px;
+  z-index: 3;
+  background-color: white;
+}
+
+h1 {
+  padding: 2px;
+  justify-content: center;
+  width: 500px;
+  text-align: center;
+  margin-left: calc((100% - 500px) / 2);
+  align-items: center;
+  padding-top: 80px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  color: rgba(255, 255, 255, 0.87);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  width: 100px;
+  text-align: center;
+  margin-left: calc((100% - 100px) / 2);
+  align-items: center;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#right-image {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+#left-image {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+
+@font-face {
+  font-family: "Itim-Regular";
+  src: local("Itim-Regular"),
+    url(../assets/fonts/Itim-Regular.ttf) format("truetype");
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+@media screen and (max-height: 450px) {
+  h1 {
+    padding-top: 10px;
+  }
+}
